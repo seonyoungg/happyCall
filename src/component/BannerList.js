@@ -1,7 +1,8 @@
 import React from 'react'
 import Slider from 'react-slick'; 
 
-const BannerList = () => {
+const BannerList = ({item}) => {
+
   const settings = {
     dots: true,    
     infinite: true,    
@@ -14,10 +15,10 @@ const BannerList = () => {
     <div>
       <Slider {...settings}>
         <div>
-            <img src="/img/main01.jpg" alt=""/>
+            <img src={item?.img} alt=""/>
             <div class="text-wrap">
-              <div class="text-tit"></div>
-              <div class="text-subtit"></div>
+              <div class="text-tit">{item?.title}</div>
+              <div class="text-subtit">{item?.subtitle}</div>
             </div>
         </div>
       </Slider>
