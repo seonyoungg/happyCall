@@ -12,7 +12,7 @@ import ProductLists from './page/ProductLists';
 
 function App() {
   return (
-    <div className="App">
+    <div className="wrap">
       <Navbar/>
       <Routes>
         <Route path="/" element={<MainPage/>}></Route>
