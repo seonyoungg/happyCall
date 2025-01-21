@@ -1,7 +1,6 @@
 import React from 'react'
 
 const BannerList = ({item}) => {
-
   return (
     <div className="banner-item">
       <img src={item?.img} alt="" />
@@ -12,5 +11,4 @@ const BannerList = ({item}) => {
     </div>
   )
 }
-
 export default BannerList

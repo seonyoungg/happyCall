@@ -5,7 +5,6 @@ import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import { useEffect, useState } from 'react'
 
 const Navbar = () => {
-
     const [selectLang, setSelectLang] = useState("KOR"); // 현재 선택된 언어
     const [dropdownOpen, setDropdownOpen] = useState(false); // 드롭다운 열림/닫힘 상태
 
@@ -17,11 +16,11 @@ const Navbar = () => {
   return (
     <div class="header">
         <Container>
-            <div className='nav-wrap'>
-                <div className='logo-img'>
-                    <img src='/img/logo.png' alt="해피콜로고"/>
+            <div className="nav-wrap">
+                <div className="logo-img">
+                    <img src="/img/logo.png" alt="해피콜로고"/>
                 </div>
-                <div className='nav-item'>
+                <div className="nav-item">
                     <a class="btn outline-btn icon-btn"
                         href="https://hcmall.co.kr/" 
                         target="_blank">
@@ -29,7 +28,7 @@ const Navbar = () => {
                         해피콜스토어
                     </a>
                     <div className="lang-dropdown">
-                        <div className="underline-btn selected"
+                        <div className={`underline-btn selected ${dropdownOpen? 'active' : ''}`}
                             onClick={() => setDropdownOpen(!dropdownOpen)} >
                             {selectLang}
                         </div>
