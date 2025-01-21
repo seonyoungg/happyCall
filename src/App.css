@@ -1,0 +1,133 @@
+:root{
+  --primary-color: #ed0f0f;
+  --primary-light-color: #cf4242;
+  --primary-light-color2:rgb(255, 238, 238);
+  --primary-dark-color: #ce0606;
+  --default-light: #fff;
+}
+
+ul,li{
+  padding: 0;
+}
+/* --------------------
+      [공통스타일-btn]
+-------------------- */
+
+.btn{
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  transition: 0.3s;
+}
+
+.point-btn{
+  background: var(--primary-color);
+  color: var(--default-light);
+}
+
+.point-btn:hover,
+.point-btn:active{
+  background: var(--primary-dark-color);
+  color: var(--default-light);
+}
+
+.outline-btn{
+  background: var(--default-light);
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.outline-btn:hover,
+.outline-btn:active{
+  background: var(--primary-light-color);
+  border: 1px solid var(--primary-light-color);
+  color: var(--default-light);
+}
+
+.icon-btn{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+}
+
+.underline-btn{
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+/* --------------------
+      [Navbar]
+-------------------- */
+.nav-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.nav-wrap > .logo-img{
+  width: 220px;
+  height: 80px;
+}
+
+.nav-wrap > .nav-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-item > .lang-dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.nav-item > .lang-dropdown .selected {
+  padding: 0.5rem 1.5rem 0.5rem 0.5rem;
+  min-width: 60px;
+}
+
+.nav-item > .lang-dropdown .selected::after{
+  display: block;
+  content: '∨';
+  position: absolute;
+  bottom: 1.25rem;  
+  right:0;
+  width: 12px;
+  height: 12px;
+}
+
+.nav-item > .lang-dropdown > .dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--default-light);
+  color:var(--primary-dark-color);
+  border: 1px solid var(--primary-dark-color);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  display: none; 
+  z-index: 10;
+  text-align: center;
+  font-size: 0.875rem;
+}
+
+.nav-item > .lang-dropdown > .dropdown > li {
+  padding: 0.5rem 1rem;
+}
+
+.nav-item > .lang-dropdown .dropdown li:hover {
+  background-color: var(--primary-light-color2);
+}
+
+.nav-item > .lang-dropdown:hover .dropdown {
+  display: block;
+}
+
+.nav-item > .menu-item > img{
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
