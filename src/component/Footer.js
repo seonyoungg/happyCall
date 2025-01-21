@@ -1,8 +1,9 @@
 import React from 'react'
 import { Col, Row, Container } from 'react-bootstrap'
+
 const Footer = () => {
   return (
-    <div className="footer">
+    <div className="footer" data-name="footer">
         <div className="footer-wrap">
           <div className="footer-top">
           <Container>

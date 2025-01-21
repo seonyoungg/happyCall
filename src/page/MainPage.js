@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import BannerList from '../component/BannerList';
+import Mainlogo from '../component/Mainlogo';
 
 const MainPage = () => {
   
@@ -28,14 +29,17 @@ const MainPage = () => {
   };
 
   return (
-    <div class="banner-wrap"> 
-      {bannerLists.length > 0 && (
-        <Slider {...settings}>
-          {bannerLists.map((item) => (
-            <BannerList key={item.id} item={item}/>
-          ))}
-        </Slider>
-      )}
+    <div class="mainpage">
+      <div class="banner-wrap"> 
+        {bannerLists.length > 0 && (
+          <Slider {...settings}>
+            {bannerLists.map((item) => (
+              <BannerList key={item.id} item={item}/>
+            ))}
+          </Slider>
+        )}
+      </div>
+      <Mainlogo/>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from 'react'
 
 const BannerList = ({item}) => {
   return (
-    <div className="banner-item">
+    <div className="banner-item" data-name="banner">
       <img src={item?.img} alt="" />
       <div className="text-wrap">
         <div className="tit">{item?.title}</div>

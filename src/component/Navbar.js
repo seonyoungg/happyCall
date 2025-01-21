@@ -14,7 +14,7 @@ const Navbar = () => {
     };
 
   return (
-    <div class="header">
+    <div class="header" data-name="header">
         <Container>
             <div className="nav-wrap">
                 <div className="logo-img">
