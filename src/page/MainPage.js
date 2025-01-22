@@ -30,8 +30,8 @@ const MainPage = () => {
   };
 
   return (
-    <div class="mainpage">
-      <div class="banner-wrap"> 
+    <div className="mainpage">
+      <div className="banner-wrap"> 
         {bannerLists.length > 0 && (
           <Slider {...settings}>
             {bannerLists.map((item) => (
