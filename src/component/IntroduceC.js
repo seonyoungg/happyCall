@@ -7,7 +7,10 @@ const IntroduceC = () => {
           <div className="sub-intro" data-name="sub-content">
               <div class="tit-wrap">
                 <div className="tit">CI 및 BI 사용 가이드</div>
-                <a className="btn point-btn">PDF 다운로드</a>
+                <a className="btn point-btn"
+                    href="/img/HC_LOGO.pdf" target="_blank">
+                  PDF 다운로드
+                  </a>
               </div>
               <div className="sub-inner">
                 <div className="sub-guide">

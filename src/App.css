@@ -762,10 +762,31 @@ div[data-name="sub-content"].sub-intro .tit-wrap{
   margin-bottom: 2rem;
 }
 
+div[data-name="sub-content"].sub-intro p{
+  word-break: keep-all;
+}
+
+div[data-name="sub-content"].sub-intro .sub-guide{
+  padding: 1rem 2rem;
+  background: #f8f8f8;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap:1.5rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-guide.border{
+  font-size: 1.25rem;
+}
+
 div[data-name="sub-content"].sub-intro .sub-guide .btn{
   min-width: 5rem;
   cursor: initial;
   pointer-events: none;
+  margin-bottom: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-item > p{
   margin-bottom: 1rem;
 }
 
@@ -774,4 +795,31 @@ div[data-name="sub-content"].sub-intro .sub-inner .d-flex{
   justify-content: center;
   gap: 2rem;
   font-size: 1.5rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-inner .d-flex .img{
+  font-size: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+div[data-name="sub-content"].sub-intro .sub-inner .d-flex .img p{
+  margin-top: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-sign {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-sign .h5{
+  font-weight: 700;
+}
+
+div[data-name="sub-content"].sub-intro .sub-sign .img{
+  width: 100px;
+  height: 50px;
 }
