@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import BannerList from '../component/BannerList';
 import Mainlogo from '../component/Mainlogo';
+import MainProduct from '../component/MainProduct';
+import MainSns from '../component/MainSns';
 
 const MainPage = () => {
   
@@ -10,8 +12,7 @@ const MainPage = () => {
   const getBannerData = async () => {
       const response = await fetch("https://my-json-server.typicode.com/seonyoungg/happyCall/banners");
       const data = await response.json();
-      console.log(data); // 데이터 구조 확인
-      setBannerLists(data);  // 'banners' 배열을 가져와 설정
+      setBannerLists(data);  
   };
 
   useEffect(() => {
@@ -40,6 +41,8 @@ const MainPage = () => {
         )}
       </div>
       <Mainlogo/>
+      <MainProduct/>
+      <MainSns/>
     </div>
   );
 };
