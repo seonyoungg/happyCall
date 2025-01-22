@@ -710,17 +710,25 @@ div.subpage{
   padding-top:80px;
 }
 
-div[data-name="sub-content"] .h1{
-  font-weight: 700;
+div[data-name="sub-content"] .tit{
+  font-size: 2.5rem;
   text-align: center;
+  font-weight: 700;
   line-height: 1.5;
+  word-break: keep-all;
+}
+
+@media screen and (max-width:767.98px){
+  div[data-name="sub-content"] .tit{
+    font-size: 2rem;
+  }
 }
 
 /* sub-logo */
 div[data-name="sub-content"].sub-logo{
   display: flex;
   flex-direction: column;
-  gap:2rem;
+  gap: 2rem;
   align-items: center;
 }
 
@@ -739,4 +747,31 @@ div[data-name="sub-content"] .text-wrap{
   div[data-name="sub-content"].sub-logo .page-logo > img{
     max-height: 150px;
   }
+}
+
+/* sub-intro */
+div[data-name="sub-content"].sub-intro > .tit{
+  margin-bottom: 2rem;
+}
+
+div[data-name="sub-content"].sub-intro .tit-wrap{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-guide .btn{
+  min-width: 5rem;
+  cursor: initial;
+  pointer-events: none;
+  margin-bottom: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-inner .d-flex{
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.5rem;
 }

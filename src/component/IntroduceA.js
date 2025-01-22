@@ -8,7 +8,7 @@ const IntroduceA = () => {
             <div className="page-logo">
                 <img src="/img/logo_big.png" alt=""/>
             </div>
-            <div className="h1">
+            <div className="tit">
                 해피콜로 만들어 온 주방의 행복,<br/>
                 HC*로 함께할 당신의 더 나은 매일 그리고 내일
             </div>
