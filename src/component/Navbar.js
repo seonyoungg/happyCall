@@ -2,7 +2,7 @@ import React from 'react'
 import { Container } from 'react-bootstrap'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const Navbar = () => {
     const [selectLang, setSelectLang] = useState("KOR"); // 현재 선택된 언어
@@ -14,14 +14,14 @@ const Navbar = () => {
     };
 
   return (
-    <div class="header" data-name="header">
+    <div className="header" data-name="header">
         <Container>
             <div className="nav-wrap">
                 <div className="logo-img">
                     <img src="/img/logo.png" alt="해피콜로고"/>
                 </div>
                 <div className="nav-item">
-                    <a class="btn outline-btn icon-btn"
+                    <a className="btn outline-btn icon-btn"
                         href="https://hcmall.co.kr/" 
                         target="_blank">
                         <FontAwesomeIcon icon={faCartShopping} />
@@ -41,7 +41,7 @@ const Navbar = () => {
                         )}
                         </div>
 
-                    <div class="menu-item">
+                    <div className="menu-item">
                         <img src='/img/menu.png' alt="메뉴"/>
                     </div>
                 </div>

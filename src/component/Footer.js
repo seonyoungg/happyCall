@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
           <div className="footer-bottom">
           <Container>
-            <div class="footer-inner">
+            <div className="footer-inner">
               <ul>
                 <li><a href="#">회사소개</a></li>
                 <li><a href="#">오시는 길</a></li>

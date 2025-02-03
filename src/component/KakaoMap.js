@@ -1,26 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
+import { Map, MapMarker } from 'react-kakao-maps-sdk';
 
-const KakaoMap = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=YOUR_APP_KEY&autoload=false";
-    script.async = true;
+const KakaoMap = ({ lat, lng }) => {
+  return (
+    <div>
+      <Map 
+        center={{ lat, lng }} 
+        style={{ width: "100%", height: "350px" }}
+        level={3}>
 
-    script.onload = () => {
-      window.kakao.maps.load(() => {
-        const container = document.getElementById('map');
-        const options = {
-          center: new window.kakao.maps.LatLng(33.450701, 126.570667), // 지도 중심 좌표
-          level: 3, // 지도 확대 레벨
-        };
-        new window.kakao.maps.Map(container, options);
-      });
-    };
-
-    document.body.appendChild(script);
-  }, []);
-
-  return <div id="map" style={{ width: '100%', height: '400px' }} />;
-};
+        <MapMarker position={{ lat, lng }}>
+          {/* <div style={{ padding: "5px", color: "#000" }}>여기에 위치!</div> */}
+        </MapMarker>
+      </Map>
+    </div>
+  );
+}
 
 export default KakaoMap;

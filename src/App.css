@@ -111,6 +111,7 @@ p{
   align-items: center;
   gap: 0.75rem;
 }
+
 /* --------------------
       [Navbar]
 -------------------- */
@@ -822,4 +823,90 @@ div[data-name="sub-content"].sub-intro .sub-sign .h5{
 div[data-name="sub-content"].sub-intro .sub-sign .img{
   width: 100px;
   height: 50px;
+}
+
+/* introduce - history */
+div[data-name="sub-content"].sub-intro .sub-history{
+  display: flex;
+  gap: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-btn{
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-btn .btn{
+  position: relative;
+  z-index: 2;
+  white-space: nowrap;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-btn::before{
+  position: absolute;
+  top:0;
+  left:50%;
+  width: 1px;
+  height: 100%;
+  content: '';
+  background: var(--primary-color);
+  z-index: 1;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-btn::after{
+  position: absolute;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  font-size: 1.25rem;
+  content: '▼';
+  color: var(--primary-color);
+  z-index: 1;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-inner{
+  display: flex;
+  gap: 1rem;
+  flex-direction: row-reverse;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-img{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .content-inner{
+  display:flex;
+  gap: 1rem;
+  width: 24rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .content-inner .content-date{
+  width: auto;
+  white-space: nowrap;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .content-inner:not(:last-child){
+  margin-bottom: 1rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .content-inner .content-img{
+  width: 100%;
+}
+
+
+
+/* introduce - map */
+div[data-name="sub-content"].sub-intro div.map-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+  margin-bottom: 1rem;
 }
