@@ -925,14 +925,21 @@ div[data-name="sub-content"].sub-intro .sub-history .content-inner .content-img{
 
 
 @media screen and (max-width:767.98px){
-  
+
   div[data-name="sub-content"].sub-intro .sub-history .history-img{
     display: none;
   }
 
+  div[data-name="sub-content"].sub-intro .sub-history .history-btn{
+    width: 12rem
+  }
+
+  div[data-name="sub-content"].sub-intro .sub-history .history-inner{
+    width: calc( 100% - 12rem);
+  }
   div[data-name="sub-content"].sub-intro .sub-history .history-content{
-    width: 100%;
     height: 40rem;
+    width: 100%;
   }
 }
 
