@@ -3,13 +3,14 @@ import {useState} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const ProductLists = () => {
-
-  const [selectProduct, setSelectProduct] = useState(products[0]);
+  
+  const [products, setProducts] = useState([]); 
+  const [selectProduct, setSelectProduct] = useState(null);
 
   const getProductData = async () => {
       const response = await fetch("https://my-json-server.typicode.com/seonyoungg/happyCall/products");
       const data = await response.json();
-      setSelectProduct(data);  
+      setSelectProduct(data[0]);  
   };
 
   useEffect(() => {
