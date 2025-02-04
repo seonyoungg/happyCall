@@ -9,11 +9,35 @@ import Footer from './component/Footer';
 import MainPage from './page/MainPage';
 import Introduce from './page/Introduce';
 import ProductLists from './page/ProductLists';
+import SideBar from './component/SideBar';
+import { useEffect, useState } from 'react';
 
 function App() {
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+  const  toggleSide = ()=>{
+    setSidebarOpen(!sidebarOpen);
+  };
+
+  useEffect(() => {
+    if (sidebarOpen) {
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    }
+  
+    return () => {
+      document.body.style.overflow = "auto";
+      document.documentElement.style.overflow = "auto";
+    };
+  }, [sidebarOpen]);
+
   return (
     <div className="wrap">
-      <Navbar/>
+      <SideBar sidebarOpen={sidebarOpen} toggleSide={toggleSide}/>
+      <Navbar toggleSide={toggleSide}/>
       <Routes>
         <Route path="/" element={<MainPage/>}></Route>
         <Route path="/introduce" element={<Introduce/>}></Route>

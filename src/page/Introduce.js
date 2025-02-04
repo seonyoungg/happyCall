@@ -233,7 +233,7 @@ const Introduce = () => {
   return (
     <div className="subpage">
       
-      <Container>
+      <Container id="location1">
           <div className="sub-logo" data-name="sub-content">
               <div className="page-logo">
                   <img src="/img/logo_big.png" alt=""/>
@@ -257,7 +257,7 @@ const Introduce = () => {
           </div>
       </Container>
       
-      <Container>
+      <Container id="location2">
           <div className="sub-intro" data-name="sub-content">
               <div className="tit">HC*의 중요한 가치</div>
               <div className="sub-inner">
@@ -267,7 +267,7 @@ const Introduce = () => {
           </div>
       </Container>
       
-      <Container>
+      <Container id="location3">
           <div className="sub-intro" data-name="sub-content">
               <div class="tit-wrap">
                 <div className="tit">CI 및 BI 사용 가이드</div>
@@ -330,7 +330,7 @@ const Introduce = () => {
           </div>
       </Container>
 
-      <Container>
+      <Container id="location4">
           <div className="sub-intro" data-name="sub-content">
             <div className="tit">안전보건 경영방침</div>
               <div className="sub-inner">
@@ -359,7 +359,7 @@ const Introduce = () => {
           </div>
       </Container>
       
-      <Container>
+      <Container id="location5">
         <div className="sub-intro" data-name="sub-content">
           <div className="tit">HC*의 역사</div>
           <div className="sub-history">
@@ -407,7 +407,7 @@ const Introduce = () => {
       </Container>
 
 
-      <Container>
+      <Container id="location6">
           <div className="sub-intro" data-name="sub-content">
             <div className="tit">HC* 찾아오시는 길</div>
             <div className="sub-inner">
