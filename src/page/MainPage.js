@@ -22,11 +22,14 @@ const MainPage = () => {
   const settings = {
     dots: false,
     infinite: true,
-    speed: 500,
+    autoplay: 3000,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    adaptiveHeight: true,
+    waitForAnimate: true 
   };
 
   return (

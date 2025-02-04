@@ -876,6 +876,7 @@ div[data-name="sub-content"].sub-intro .sub-history .history-inner{
 }
 
 div[data-name="sub-content"].sub-intro .sub-history .history-img{
+  width: 60%;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
@@ -884,7 +885,13 @@ div[data-name="sub-content"].sub-intro .sub-history .history-img{
 div[data-name="sub-content"].sub-intro .sub-history .content-inner{
   display:flex;
   gap: 1rem;
-  width: 24rem;
+}
+
+div[data-name="sub-content"].sub-intro .sub-history .history-content{
+  width: 40%;
+  height: 43rem;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 div[data-name="sub-content"].sub-intro .sub-history .content-inner .content-date{
@@ -900,7 +907,30 @@ div[data-name="sub-content"].sub-intro .sub-history .content-inner .content-img{
   width: 100%;
 }
 
+@media screen and (max-width:1399.98px){
+  
+  div[data-name="sub-content"].sub-intro .sub-history .history-img{
+    width: 50%;
+  }
 
+  div[data-name="sub-content"].sub-intro .sub-history .history-content{
+    width: 50%;
+    height: 30rem;
+  }
+}
+
+
+@media screen and (max-width:767.98px){
+  
+  div[data-name="sub-content"].sub-intro .sub-history .history-img{
+    display: none;
+  }
+
+  div[data-name="sub-content"].sub-intro .sub-history .history-content{
+    width: 100%;
+    height: 40rem;
+  }
+}
 
 /* introduce - map */
 div[data-name="sub-content"].sub-intro div.map-btn{
@@ -909,4 +939,110 @@ div[data-name="sub-content"].sub-intro div.map-btn{
   justify-content: center;
   gap:1rem;
   margin-bottom: 1rem;
+}
+
+/* --------------------
+      [Sub-content / lists]
+-------------------- */
+div[data-name="sub-content"] .product-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:1rem;
+  margin-bottom: 2rem;
+}
+
+div[data-name="sub-content"] .product-btn .btn-ratio{
+  padding: 0.875rem;
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #fff;
+  color:#222;
+  border: 1px solid #dee2e6;
+}
+
+div[data-name="sub-content"] .product-btn .btn-ratio img{
+  width: 45px;
+  height: 45px;
+}
+
+div[data-name="sub-content"] .product-btn .btn-ratio.active{
+  background: var(--primary-light-color2);
+  color:var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+div[data-name="sub-content"] .tab-page{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap:0.875rem;
+}
+
+div[data-name="sub-content"] .tab-page button.btn{
+  border: 1px solid #dee2e6;
+  padding: 0.2rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  align-content: center;
+  transition: 0.3s;
+}
+
+div[data-name="sub-content"] .tab-page button.btn:hover{
+  background: #dee2e6;
+}
+
+div[data-name="sub-content"] .main-info{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+div[data-name="sub-content"] .main-title{
+  display: flex;
+  gap: 0.75rem;
+}
+
+div[data-name="sub-content"] .main-title a{
+  font-size: 1rem;
+  position: relative;
+}
+
+div[data-name="sub-content"] .main-title a::after{
+  content: '';
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  position: absolute;
+  left:0;
+  background: #222;
+  transition: 0.3s;
+}
+
+div[data-name="sub-content"] .main-title a:hover::after{
+  width: 100%;
+}
+
+div[data-name="sub-content"] .product-img p{
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+@media screen and (max-width:575.98px){
+}
+
+@media screen and (max-width:399.98px){
+  div[data-name="sub-content"] .main-title{
+    flex-direction: column;
+    gap:0;
+  }
 }
