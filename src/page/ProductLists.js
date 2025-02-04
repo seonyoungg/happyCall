@@ -1,9 +1,9 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const ProductLists = () => {
-  
+
   const [products, setProducts] = useState([]); 
   const [selectProduct, setSelectProduct] = useState(null);
 
@@ -23,50 +23,34 @@ const ProductLists = () => {
         
         <div data-name="sub-content">
           <div className="product-btn">
-            <button className="btn btn-ratio active">
-              <img src="../img/pan.png" alt="#" />
-              <span>프라이팬</span>
-            </button>
-            <button className="btn btn-ratio">
-              <img src="../img/pan2.png" alt="#" />
-              <span>양면팬</span>
-            </button>
-            <button className="btn btn-ratio">
-              <img src="../img/pot.png" alt="#" />
-              <span>냄비</span>
-            </button>
-            <button className="btn btn-ratio">
-              <img src="../img/blender.png" alt="#" />
-              <span>블렌더</span>
-            </button>
-            <button className="btn btn-ratio">
-              <img src="../img/oven.png" alt="#" />
-              <span>소형가전</span>
-            </button>
-            <button className="btn btn-ratio">
-              <img src="../img/kitchen.png" alt="#" />
-              <span>주방소품</span>
-            </button>
-
+            {products.map((product)=>(
+              <button
+                key={product.id} 
+                className={`btn btn-ratio ${selectProduct.id === product.id ? "active":""}`}
+                onClick={()=>selectProduct(product)}>
+                <img src={`../img/${product.id}.png`} alt={product.title} />
+                <span>{product.title}</span>
+              </button>
+            ))}
           </div>
           <Row className='gy-3'>
             <Col xs="12">
               <Row className='gy-3'>
                 <Col xs="6">
                   <div className="main-img">
-                      <img src="../img/a0.jpg" alt=""/>
+                      <img src={selectProduct.img} 
+                           alt={selectProduct.title}/>
                   </div>
                 </Col>
                 <Col xs="6">
                   <div className="main-info">
                       <h3 className="main-title">
-                        <span>프라이팬</span>
+                        <span>{selectProduct.title}</span>
                         <span>
-                          <a href="https://hcmall.co.kr/product/list.html?cate_no=24" target="_blank">쇼핑몰 이동하기＞</a>
+                          <a href={selectProduct.url} target="_blank">쇼핑몰 이동하기＞</a>
                         </span>
                       </h3>
-                      <p className="main-subtitle">대한민국 프라이팬의 자존심<br/>
-                          소재와 코팅 재질, 형태별로 펼쳐지는 다양한 HC* 프라이팬 라인업</p>
+                      <p className="main-subtitle">{selectProduct.subtitle}</p>
                   </div>
                 </Col> 
               </Row>
@@ -75,38 +59,17 @@ const ProductLists = () => {
             <Row className='gy-3'>
               <Col xs="12">
                 <Row className="g-3">
+
+                  {selectedProduct.lists.map((list) => (
                   <Col xs="6" sm="3">
                     <div className="product-img">
                         <a href="#">
-                            <img src="/img/a1.jpg" alt=""/>
+                          <img src={list.img} alt={list.title} />
                         </a>
-                        <p>그래핀시리즈</p>
+                        <p>{list.title}</p>
                     </div>
                   </Col>
-                  <Col xs="6" sm="3">
-                    <div className="product-img">
-                        <a href="#">
-                            <img src="/img/a1.jpg" alt=""/>
-                        </a>
-                        <p>그래핀시리즈</p>
-                    </div>
-                  </Col>
-                  <Col xs="6" sm="3">
-                    <div className="product-img">
-                        <a href="#">
-                            <img src="/img/a1.jpg" alt=""/>
-                        </a>
-                        <p>그래핀시리즈</p>
-                    </div>
-                  </Col>
-                  <Col xs="6" sm="3">
-                    <div className="product-img">
-                        <a href="#">
-                            <img src="/img/a1.jpg" alt=""/>
-                        </a>
-                        <p>그래핀시리즈</p>
-                    </div>
-                  </Col>
+                  ))}
                 </Row>
               </Col>
               <Col xs="12">                    
